@@ -7,13 +7,13 @@ public class SqliteConnection {
     private static Connection instance = null;
 
     private SqliteConnection() {
-        String url = "jdbc:sqlite:contacts.db";
+        String url = "jdbc:sqlite:";
         try {
             instance = DriverManager.getConnection(url);
-        } catch (SQLException sqlEx) {
+     } catch (SQLException sqlEx) {
             System.err.println(sqlEx);
         }
-    }
+       }
 
     public static Connection getInstance() {
         if (instance == null) {
